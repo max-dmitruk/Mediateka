@@ -16,10 +16,7 @@ namespace MediaBase
                 genre = value;
             }
         }
-        public override void Play()
-        {
-            Console.WriteLine("Играет трек");
-        }
+        public override void Play() {}
         public override void Add() {}
         public override void Delete(string name) {}
         public override string Search(string name)

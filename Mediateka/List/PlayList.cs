@@ -1,18 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using MediaBase;
 
 namespace Mediateka
 {
     public class PlayList
     {
-        List<MediaBase.Media> playlist = new List<MediaBase.Media> ();
+        List<Media> MediaList = new List<Media> ();
 
-        public void Add(MediaBase.Media file)
+        public void Add(Media file)
         {
-            playlist.Add(file);
+            MediaList.Add(file);
         }
 
         public string Search(string name)
@@ -20,15 +18,15 @@ namespace Mediateka
             return name;
         }
 
-        public void Delete(MediaBase.Media file)
+        public void Delete(Media file)
         {
-            playlist.Remove(file);
+            MediaList.Remove(file);
         }
-        public void Play(MediaBase.Media file)
+        public void PlayMediaList (Media file)
         {
-            foreach (var i in playlist)
+            foreach (var i in MediaList)
             {
-                i.Play(file);
+                i.Play();
             }
         }
     }
