@@ -1,48 +1,31 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Mediateka
+namespace MediaBase
 {
-    
-    class Photo:Media
+    public class Photo : Media
     {
-        private string formatPhoto;
-        public string FormatPhoto
+        private int resolution;
+        public int Resolution 
         {
-            get 
+            get
             {
-                return formatPhoto;
+                return resolution;
             }
             set
             {
-                    formatPhoto = value;
+                resolution = value;
             }
         }
-        public Photo() { }
 
-        public Photo(string namePhoto, string formatPhoto) : base(namePhoto)
+        public override void Play()
         {
-            FormatPhoto = formatPhoto;
+            Console.WriteLine("Играет картинка");
         }
-        public override void Play(string name)
+        public override void Add() {}
+        public override void Delete(string name) {}
+        public override string Search(string name)
         {
-            base.Play(name);
+            return name;
         }
-        public override void Add()
-        {
-            base.Add();
-        }
-        public override void Delete()
-        {
-            base.Delete();
-        }
-        public override void Search()
-        {
-            base.Search();
-        }
-
     }
 }

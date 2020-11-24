@@ -1,53 +1,31 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Mediateka
+namespace MediaBase
 {
-    class Video : Media
+    public class Video : Media
     {
-        private string formatVideo;
-
-        public string FormatVideo
-        {
+        private int fps;
+        public int FPS 
+        { 
             get
             {
-                return formatVideo;
+                return fps;
             }
-            set
+            set 
             {
-                formatVideo = value;
+                fps = value;
             }
         }
 
-        public Video() { }
-
-        public Video(string name, int duration, string formatVideo) : base(name, duration)
+        public override void Play()
         {
-            this.formatVideo = formatVideo;
+            Console.WriteLine("Играет Видео");
         }
-
-        public override void Play(string name)
+        public override void Add() {}
+        public override void Delete(string name) {}
+        public override string Search(string name)
         {
-            Console.WriteLine("Вы смотрите видео: {0}", name);
-            base.Play(name);
-
+            return name;
         }
-        public override void Add()
-        {
-            base.Add();
-        }
-
-        public override void Delete()
-        {
-            base.Delete();
-        }
-        public override void Search()
-        {
-            base.Search();
-        }
-        
     }
 }
