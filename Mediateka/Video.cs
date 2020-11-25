@@ -4,14 +4,15 @@ namespace MediaBase
 {
     public class Video : Media
     {
-        private int fps;
-        public int FPS 
-        { 
+
+        private string fps;
+        public string FPS
+        {
             get
             {
                 return fps;
             }
-            set 
+            set
             {
                 fps = value;
             }

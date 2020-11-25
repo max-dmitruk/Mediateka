@@ -4,8 +4,8 @@ namespace MediaBase
 {
     public class Photo : Media
     {
-        private int resolution;
-        public int Resolution 
+        private string resolution;
+        public string Resolution
         {
             get
             {

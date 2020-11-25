@@ -22,7 +22,7 @@ namespace Mediateka
         {
             MediaList.Remove(file);
         }
-        public void PlayMediaList (Media file)
+        public void PlayMediaList()
         {
             foreach (var i in MediaList)
             {

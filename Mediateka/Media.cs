@@ -8,6 +8,15 @@ namespace MediaBase
         public string Format { get; set; }
         public int SizeFile { get; set; }
 
+        public Media() { }
+
+        public Media(string name,string format,int sizefile)
+        {
+            Name = name;
+            Format = format;
+            SizeFile = sizefile;
+        }
+
         public abstract void Play();
         public abstract void Add();
         public abstract void Delete(string name);
