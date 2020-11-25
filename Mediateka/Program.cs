@@ -7,9 +7,6 @@ namespace Mediateka
     {
         static void Main(string[] args)
         {
-            Photo photo = new Photo("name","qw",23,23);
-            Console.WriteLine(photo);
-            Console.ReadKey();
         }
     }
 }

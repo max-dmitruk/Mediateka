@@ -8,8 +8,7 @@ namespace MediaBase
         public string Format { get; set; }
         public int SizeFile { get; set; }
 
-        public Media() { }
-
+        
         public Media(string name,string format,int sizefile)
         {
             Name = name;

@@ -4,7 +4,6 @@ namespace MediaBase
 {
     public class Video : Media
     {
-
         private string fps;
         public string FPS
         {
